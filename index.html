@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>กินไรดี? - Food Selector</title>
+<title>กินไรดี?</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -52,7 +52,6 @@
 </head>
 <body class="pb-16 md:pb-12">
 
-<!-- Top Navigation Bar (Full Width Container) -->
 <header class="bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
     <div class="max-w-6xl mx-auto px-4 md:px-8 h-16 md:h-20 flex items-center justify-between">
         <div>
@@ -61,12 +60,9 @@
             </h1>
             <p class="text-xs md:text-sm text-gray-500 font-medium">ระบบช่วยตัดสินใจเลือกมื้ออาหาร</p>
         </div>
-        <div class="px-3 py-1.5 bg-[#EBF7EE] text-[#00B14F] text-xs md:text-sm font-semibold rounded-lg border border-[#00B14F]/20">
-            ใช้งานสะดวกทุกอุปกรณ์
         </div>
     </div>
 
-    <!-- Segmented Tabs -->
     <div class="max-w-6xl mx-auto px-4 md:px-8">
         <div class="grid grid-cols-3 text-center border-t border-gray-100 text-sm md:text-base font-medium">
             <button class="nav-tab py-3 md:py-4 tab-item-active" data-view="spin">สุ่มเมนู</button>
@@ -76,15 +72,11 @@
     </div>
 </header>
 
-<!-- Main Container (Responsive Width) -->
 <main class="max-w-6xl mx-auto px-4 md:px-8 pt-6 md:pt-8">
 
-    <!-- ================= VIEW 1: สุ่มเมนู (SPIN & QUICK FILTERS) ================= -->
     <section id="view-spin" class="space-y-6">
-        <!-- Responsive Grid: 1 col on mobile, 2 cols on PC/Tablet -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             
-            <!-- Left Side / Column: ตัวกรองและคำแนะนำ (4 คอลัมน์บนจอใหญ่) -->
             <div class="lg:col-span-5 space-y-4">
                 <div class="bg-white p-5 md:p-6 rounded-3xl border border-gray-200 shadow-sm space-y-4">
                     <h2 class="text-sm md:text-base font-bold text-gray-800 flex items-center gap-2">
@@ -129,16 +121,14 @@
                     </div>
                 </div>
 
-                <!-- Guidance Info Box -->
                 <div class="bg-emerald-50/70 border border-[#00B14F]/20 rounded-2xl p-4 text-xs md:text-sm text-emerald-900 flex items-start gap-3">
                     <svg class="w-5 h-5 text-[#00B14F] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <p class="leading-relaxed">เมื่อกด <strong>"ตกลง กินเมนูนี้"</strong> ในหน้าต่างผลลัพธ์ ระบบจะทำการพักชื่ออาหารนั้นจากการสุ่มเป็นเวลา 3 วัน เพื่อช่วยให้คุณได้กินอาหารที่หลากหลาย</p>
+                    <p class="leading-relaxed">เมื่อกด <strong>"ตกลง กินเมนูนี้"</strong> ระบบจะพักเมนูนั้น 3 วัน เพื่อช่วยกระจายโภชนาการและกันความจำเจ</p>
                 </div>
             </div>
 
-            <!-- Right Side / Column: แท่นสุ่มผลลัพธ์ขนาดใหญ่ (7 คอลัมน์บนจอใหญ่) -->
             <div class="lg:col-span-7 space-y-4">
                 <div class="bg-white rounded-3xl p-6 md:p-12 border border-gray-200 shadow-sm text-center flex flex-col justify-between min-h-[380px] md:min-h-[440px]">
                     <div>
@@ -146,7 +136,6 @@
                             ผลการสุ่มมื้อนี้ของคุณ
                         </span>
                         
-                        <!-- Slot Text Display -->
                         <div class="h-32 md:h-44 flex items-center justify-center">
                             <div id="slot-display" class="text-3xl md:text-5xl font-bold text-gray-900 tracking-wide transition-all px-4">
                                 กดปุ่มเพื่อเริ่มสุ่ม
@@ -154,7 +143,6 @@
                         </div>
                     </div>
 
-                    <!-- Big Spin Button -->
                     <button id="btn-spin" class="btn-grab-primary w-full text-white font-bold text-lg md:text-xl py-4 md:py-5 rounded-2xl shadow-md mt-6 flex items-center justify-center gap-3">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
@@ -167,7 +155,7 @@
         </div>
     </section>
 
-    <!-- ================= VIEW 2: ประวัติการกิน (HISTORY) ================= -->
+    <!--ประวัติการกิน -->
     <section id="view-history" class="hidden space-y-4 max-w-4xl mx-auto">
         <div class="flex justify-between items-center px-1">
             <div>
@@ -177,11 +165,10 @@
             <button id="btn-clear-history" class="text-xs md:text-sm text-rose-600 font-semibold hover:underline">ล้างประวัติทั้งหมด</button>
         </div>
         <div id="history-list" class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <!-- Dynamically Rendered -->
         </div>
     </section>
 
-    <!-- ================= VIEW 3: จัดการเมนู (MANAGE MENUS) ================= -->
+    <!--จัดการเมนู -->
     <section id="view-menus" class="hidden space-y-6 max-w-4xl mx-auto">
         <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm">
             <h2 class="text-base md:text-lg font-bold text-gray-900 mb-4">เพิ่มเมนูส่วนตัวลงในระบบ</h2>
@@ -221,14 +208,12 @@
                 <span id="total-count-badge" class="bg-gray-200 px-2.5 py-0.5 rounded-full text-gray-800">0</span>
             </div>
             <div id="menus-container" class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <!-- Dynamically Rendered -->
             </div>
         </div>
     </section>
 
 </main>
 
-<!-- ================= RESULT MODAL (RESPONSIVE MODAL) ================= -->
 <div id="result-sheet" class="fixed inset-0 bg-black/60 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 backdrop-blur-xs">
     <div class="bg-white rounded-t-3xl sm:rounded-3xl w-full max-w-lg p-6 md:p-8 text-center shadow-2xl animate-in fade-in zoom-in duration-150">
         <div class="w-12 h-1.5 bg-gray-200 rounded-full mx-auto mb-4 sm:hidden"></div>
@@ -268,100 +253,186 @@
 </div>
 
 <script>
-    /**
-     * Sound Engine (Minimal Web Audio API)
-     */
+    class Entity {
+        constructor(id = null) {
+            this.id = id || this.generateId();
+        }
+
+        generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substring(2, 6);
+        }
+    }
+
+    class BaseMenu extends Entity {
+        #containsPork;
+
+        constructor({ id = null, name, budget, category, ingredients = '-', containsPork = false }) {
+            super(id); 
+            this.name = name;
+            this.budget = budget;
+            this.category = category;
+            this.ingredients = ingredients;
+            this.#containsPork = Boolean(containsPork);
+        }
+
+        isPork() {
+            return this.#containsPork;
+        }
+
+        getSummary() {
+            return `${this.name} (${this.category} • ${this.budget} บ.)`;
+        }
+    }
+
+    class StandardMenu extends BaseMenu {
+        constructor(data) {
+            super(data);
+        }
+
+        getSummary() {
+            return `[เมนูแนะนำ] ${this.name} • ${this.budget} บ.`;
+        }
+    }
+
+    class CustomMenu extends BaseMenu {
+        constructor(data) {
+            super(data);
+            this.isCustom = true;
+        }
+
+        getSummary() {
+            return `[เมนูส่วนตัว] ${this.name} • ${this.budget} บ.`;
+        }
+    }
+
     class SoundEngine {
-        constructor() { this.ctx = null; }
-        init() {
-            if (!this.ctx) {
+        #ctx = null;
+        #init() {
+            if (!this.#ctx) {
                 const AudioCtx = window.AudioContext || window.webkitAudioContext;
-                this.ctx = new AudioCtx();
+                this.#ctx = new AudioCtx();
             }
-            if (this.ctx.state === 'suspended') this.ctx.resume();
+            if (this.#ctx.state === 'suspended') this.#ctx.resume();
         }
         playTick() {
-            this.init();
-            const osc = this.ctx.createOscillator();
-            const gain = this.ctx.createGain();
+            this.#init();
+            const osc = this.#ctx.createOscillator();
+            const gain = this.#ctx.createGain();
             osc.type = 'sine';
-            osc.frequency.setValueAtTime(500, this.ctx.currentTime);
-            gain.gain.setValueAtTime(0.04, this.ctx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.03);
+            osc.frequency.setValueAtTime(500, this.#ctx.currentTime);
+            gain.gain.setValueAtTime(0.04, this.#ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, this.#ctx.currentTime + 0.03);
             osc.connect(gain);
-            gain.connect(this.ctx.destination);
+            gain.connect(this.#ctx.destination);
             osc.start();
-            osc.stop(this.ctx.currentTime + 0.03);
+            osc.stop(this.#ctx.currentTime + 0.03);
         }
         playSuccess() {
-            this.init();
+            this.#init();
             const freqs = [523.25, 659.25, 783.99];
             freqs.forEach((freq, idx) => {
-                const osc = this.ctx.createOscillator();
-                const gain = this.ctx.createGain();
-                const start = this.ctx.currentTime + (idx * 0.08);
+                const osc = this.#ctx.createOscillator();
+                const gain = this.#ctx.createGain();
+                const start = this.#ctx.currentTime + (idx * 0.08);
                 osc.type = 'sine';
                 osc.frequency.setValueAtTime(freq, start);
                 gain.gain.setValueAtTime(0.05, start);
                 gain.gain.exponentialRampToValueAtTime(0.001, start + 0.2);
                 osc.connect(gain);
-                gain.connect(this.ctx.destination);
+                gain.connect(this.#ctx.destination);
                 osc.start(start);
                 osc.stop(start + 0.2);
             });
         }
     }
 
-    /**
-     * Storage Controller
-     */
     class StorageController {
+        #menusKey = 'kinraidee_clean_v8';
+        #histKey = 'kinraidee_hist_v8';
+        #menus = [];
+        #history = [];
+
         constructor() {
-            this.menusKey = 'kinraidee_clean_v6';
-            this.histKey = 'kinraidee_hist_v6';
-            this.menus = this.getMenus();
-            this.history = this.getHistory();
+            this.#menus = this.#loadMenus();
+            this.#history = this.#loadHistory();
         }
-        getMenus() {
-            const raw = localStorage.getItem(this.menusKey);
-            return raw ? JSON.parse(raw) : [
+
+        #loadMenus() {
+            const raw = localStorage.getItem(this.#menusKey);
+            if (raw) {
+                const parsed = JSON.parse(raw);
+                return parsed.map(item => item.isCustom ? new CustomMenu(item) : new StandardMenu(item));
+            }
+            const defaults = [
                 { id: 1, name: "ข้าวกะเพราหมูสับไข่ดาว", budget: "50-80", category: "ข้าว/จานเดียว", containsPork: true, ingredients: "หมูสับ, ใบกะเพรา, พริกสด, ไข่ไก่" },
                 { id: 2, name: "ก๋วยเตี๋ยวต้มยำน้ำข้น", budget: "50-80", category: "เมนูเส้น", containsPork: true, ingredients: "เส้นเล็ก, หมูสับ, มะนาว, พริกเผา" },
                 { id: 3, name: "สลัดอกไก่ย่าง", budget: "50-80", category: "ส้มตำ/ยำ", containsPork: false, ingredients: "อกไก่ย่าง, ผักสลัดรวม, น้ำสลัดงาขาว" },
                 { id: 4, name: "บะหมี่กึ่งสำเร็จรูปทรงเครื่อง", budget: "<50", category: "เมนูเส้น", containsPork: false, ingredients: "บะหมี่กึ่งสำเร็จรูป, ไข่ไก่, ผักกาดขาว" },
-                { id: 5, name: "หมูกระทะชุดใหญ่", budget: "100+", category: "ข้าว/จานเดียว", containsPork: true, ingredients: "หมูหมัก, ผักรวม, วุ้นเส้น, น้ำจิ้ม" },
-                { id: 6, name: "ข้าวไข่ข้นกุ้ง", budget: "50-80", category: "ข้าว/จานเดียว", containsPork: false, ingredients: "กุ้งสด, ไข่ไก่ 2 ฟอง, ซอสปรุงรส" },
-                { id: 7, name: "ส้มตำไทยไก่ย่าง", budget: "50-80", category: "ส้มตำ/ยำ", containsPork: false, ingredients: "มะละกอดิบ, อกไก่ย่าง, ถั่วลิสง" }
+                { id: 5, name: "ข้าวไข่ข้นกุ้ง", budget: "50-80", category: "ข้าว/จานเดียว", containsPork: false, ingredients: "กุ้งสด, ไข่ไก่ 2 ฟอง, ซอสปรุงรส" },
+                { id: 6, name: "ส้มตำไทยไก่ย่าง", budget: "50-80", category: "ส้มตำ/ยำ", containsPork: false, ingredients: "มะละกอดิบ, อกไก่ย่าง, ถั่วลิสง" }
             ];
+            return defaults.map(d => new StandardMenu(d));
         }
-        saveMenus() { localStorage.setItem(this.menusKey, JSON.stringify(this.menus)); }
-        getHistory() {
-            const raw = localStorage.getItem(this.histKey);
+
+        #loadHistory() {
+            const raw = localStorage.getItem(this.#histKey);
             return raw ? JSON.parse(raw) : [];
         }
-        saveHistory() { localStorage.setItem(this.histKey, JSON.stringify(this.history)); }
+
+        get menus() {
+            return this.#menus;
+        }
+
+        get history() {
+            return this.#history;
+        }
+
+        saveMenus() {
+            const plainData = this.#menus.map(m => ({
+                id: m.id,
+                name: m.name,
+                budget: m.budget,
+                category: m.category,
+                ingredients: m.ingredients,
+                containsPork: m.isPork(),
+                isCustom: m instanceof CustomMenu
+            }));
+            localStorage.setItem(this.#menusKey, JSON.stringify(plainData));
+        }
+
+        saveHistory() {
+            localStorage.setItem(this.#histKey, JSON.stringify(this.#history));
+        }
+
         record(menu) {
-            this.history.unshift({ ...menu, timestamp: Date.now() });
-            if (this.history.length > 50) this.history.pop();
+            this.#history.unshift({
+                id: menu.id,
+                name: menu.name,
+                budget: menu.budget,
+                category: menu.category,
+                timestamp: Date.now()
+            });
+            if (this.#history.length > 50) this.#history.pop();
             this.saveHistory();
         }
+
         clearHist() {
-            this.history = [];
+            this.#history = [];
             this.saveHistory();
         }
-        addMenu(menu) {
-            this.menus.push(menu);
+
+        addMenu(menuData) {
+            const newMenu = new CustomMenu(menuData);
+            this.#menus.push(newMenu);
             this.saveMenus();
         }
+
         deleteMenu(id) {
-            this.menus = this.menus.filter(m => m.id !== id);
+            this.#menus = this.#menus.filter(m => String(m.id) !== String(id));
             this.saveMenus();
         }
     }
 
-    /**
-     * App Core Logic
-     */
     class CleanFoodApp {
         constructor() {
             this.store = new StorageController();
@@ -384,7 +455,6 @@
         }
 
         initEvents() {
-            // Tab Changing
             document.querySelectorAll('.nav-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
                     const target = tab.getAttribute('data-view');
@@ -400,7 +470,6 @@
                 });
             });
 
-            // Quick Budget Chips
             document.querySelectorAll('#budget-chips .chip-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     document.querySelectorAll('#budget-chips .chip-btn').forEach(b => {
@@ -413,14 +482,12 @@
                 });
             });
 
-            // Spin Button
             this.btnSpin.addEventListener('click', () => this.spin());
             document.getElementById('modal-btn-spin-again').addEventListener('click', () => {
                 this.resultSheet.classList.add('hidden');
                 this.spin();
             });
 
-            // Confirm Eat (3-Day Cooldown)
             document.getElementById('modal-btn-confirm').addEventListener('click', () => {
                 if (this.currentResult) {
                     this.store.record(this.currentResult);
@@ -431,7 +498,6 @@
             });
             document.getElementById('modal-btn-dismiss').addEventListener('click', () => this.resultSheet.classList.add('hidden'));
 
-            // Copy Result
             document.getElementById('modal-btn-copy').addEventListener('click', () => {
                 if (!this.currentResult) return;
                 const m = this.currentResult;
@@ -439,7 +505,6 @@
                 navigator.clipboard.writeText(text).then(() => alert('คัดลอกข้อความสรุปเมนูแล้ว'));
             });
 
-            // Clear History
             document.getElementById('btn-clear-history').addEventListener('click', () => {
                 if (confirm('คุณต้องการลบประวัติการกินทั้งหมดใช่หรือไม่?')) {
                     this.store.clearHist();
@@ -447,14 +512,12 @@
                 }
             });
 
-            // Add Menu
             document.getElementById('form-add-menu').addEventListener('submit', (e) => {
                 e.preventDefault();
                 const name = document.getElementById('new-name').value;
                 const budget = document.getElementById('new-budget').value;
                 const category = document.getElementById('new-category').value;
                 this.store.addMenu({
-                    id: Date.now(),
                     name,
                     budget,
                     category,
@@ -469,19 +532,19 @@
         spin() {
             const cutoff = Date.now() - (3 * 24 * 60 * 60 * 1000);
             const cooldownIds = this.checkCooldown.checked
-                ? new Set(this.store.history.filter(h => h.timestamp >= cutoff).map(h => h.id))
+                ? new Set(this.store.history.filter(h => h.timestamp >= cutoff).map(h => String(h.id)))
                 : new Set();
 
             const candidates = this.store.menus.filter(m => {
-                if (cooldownIds.has(m.id)) return false;
+                if (cooldownIds.has(String(m.id))) return false;
                 if (this.selectedBudget !== 'all' && m.budget !== this.selectedBudget) return false;
                 if (this.selectCategory.value !== 'all' && m.category !== this.selectCategory.value) return false;
-                if (this.checkPork.checked && m.containsPork) return false;
+                if (this.checkPork.checked && m.isPork()) return false;
                 return true;
             });
 
             if (candidates.length === 0) {
-                alert('ไม่พบเมนูที่เข้าข่ายเงื่อนไข (อาจติดคูลดาวน์ 3 วัน หรือตัวกรองแคบไป) กรุณาปรับเปลี่ยนตัวกรอง');
+                alert('ไม่พบเมนูที่เข้าข่ายเงื่อนไข กรุณาปรับเปลี่ยนตัวกรอง');
                 return;
             }
 
@@ -527,9 +590,9 @@
                 div.innerHTML = `
                     <div>
                         <div class="text-sm md:text-base font-bold text-gray-900">${menu.name}</div>
-                        <div class="text-xs md:text-sm text-gray-500 mt-0.5">${menu.category} • ${menu.budget} บ.</div>
+                        <div class="text-xs md:text-sm text-gray-500 mt-0.5">${menu.getSummary()}</div>
                     </div>
-                    <button class="text-xs md:text-sm font-semibold text-rose-600 hover:text-rose-700 px-3 py-1.5 rounded-lg hover:bg-rose-50 transition-colors" onclick="app.deleteItem(${menu.id})">ลบ</button>
+                    <button class="text-xs md:text-sm font-semibold text-rose-600 hover:text-rose-700 px-3 py-1.5 rounded-lg hover:bg-rose-50 transition-colors" onclick="app.deleteItem('${menu.id}')">ลบ</button>
                 `;
                 container.appendChild(div);
             });
@@ -580,6 +643,7 @@
         }
     }
 
+    // เริ่มต้นระบบ
     const app = new CleanFoodApp();
 </script>
 </body>
